@@ -1,0 +1,22 @@
+.wrapper {
+    width: 340px;  
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: 20px auto;
+  padding: 10px 30px 60px 30px ;
+  max-width: calc(100vw - 40px);
+}
+.btn_delete {
+    border-radius: 15px;
+    margin-left: 20px;
+    display: inline-block;
+    padding: 3px 5px;
+    border: 1px solid red;
+    background-color: #edbaba;
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn_delete:hover {
+    background-color: #fff;}
