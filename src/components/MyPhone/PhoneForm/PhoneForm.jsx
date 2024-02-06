@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { nanoid } from 'nanoid';
 import css from './PhoneForm.module.css';
 
@@ -11,8 +11,8 @@ const INITIAL_STATE = {
 
 const PhoneForm = ({ onSubmit }) => {
   const [state, setState] = useState({ ...INITIAL_STATE });
-  const nameId = nanoid();
-  const numbId = nanoid();
+  const nameId = useMemo(()=>nanoid(),[]);
+  const numbId = useMemo(() => nanoid(), []);
 
   const handelChange = ({ target }) => {
     const { name, value } = target;
