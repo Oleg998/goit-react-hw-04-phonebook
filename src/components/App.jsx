@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { nanoid } from 'nanoid';
 
@@ -12,9 +12,14 @@ export const App = () => {
     return data || [];
   });
 
+  const firstRender = useRef(true);
+
   useEffect(() => {
-    localStorage.setItem('myPhoneBook', JSON.stringify(contacts));
+    if(!firstRender.current){
+    localStorage.setItem('myPhoneBook', JSON.stringify(contacts))};
   }, [contacts]);
+
+  useEffect(() =>{ (firstRender.current = false)}, []);
 
   const [filter, setFilter] = useState('');
 
