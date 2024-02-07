@@ -58,7 +58,6 @@ const PhoneForm = ({ onSubmit }) => {
           placeholder="Enter you number "
         ></input>
       </div>
-
       <button className={css.btn} type="submit">
         Add contact
       </button>
