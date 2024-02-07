@@ -52,7 +52,7 @@ export const App = () => {
     if (!filter) {
       return contacts;
     }
-    const normalazeNameFilter = contacts.filter.toLowerCase();
+    const normalazeNameFilter = filter.toLowerCase();
     const filterName = contacts.filter(({ name }) => {
       const filterCurentName = name.toLowerCase();
       return filterCurentName.includes(normalazeNameFilter);
